@@ -48,7 +48,7 @@ class investment:
   	for i in range(months):
   		TempVal = TempVal*(1 +(self.ExpectedAER/1200))
   		TempVal += self.MonthlyDeposit
-  	print("in " + str(diffMonths) + " months time " + self.InvestmentName + " will be worth: " + str(round(TempVal, 2)) + " (AER compounded monthly)")
+  	print("in " + str(diffMonths) + " months time " + self.InvestmentName + " will be worth: £" + str(round(TempVal, 2)) + " (AER compounded monthly earning £" + str(round(TempVal - (self.InitialValue+(months*self.MonthlyDeposit)), 2)) + " interest)")
   	return TempVal
 
   def __str__(self):
